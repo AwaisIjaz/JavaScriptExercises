@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Level 1 Basic </h2>
+<h3> Creating HTML file that presents modal dialog "Hello World" </h3>
+<script>window.alert("Hello World");</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+<h3> Creating variables which outputs values in three different methods </h3>
+<script>
+    var Person = { name: "Awais", age: 24};
+    var number = 000;
+
+    window.alert(Person.name + " "+ Person.age + " " + number);
+    document.write(Person.name + " " + Person.age + " " + number)
+    console.log(Person.name + " " + Person.age + " " + number)
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+<h3> Creating a function that accepts a number and returns its square </h3>
+<script>
+    function squareFunction(p1){
+        var x= p1 ** 2;
+        document.write(x)
+    }
+    squareFunction(4);
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+<h3> Creating a function that accepts 3 numbers and returns its sum </h3>
+<script>
+    function addthree(p1, p2, p3){
+        var x = p1 + p2 + p3;
+        document.write(x)
+    }
+    addthree(1, 2, 3)
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+<h3> Creating a Person object with attributes and editing objecting for a different output </h3>
+
+<script>
+        var personObject = {
+            name: "Awais",
+            age: 24,
+            occupation: "Trainee"
+        };
+        document.writeln(personObject.name);
+        document.writeln(personObject.age);
+        document.writeln(personObject.occupation);
+
+        personObject.name = "Kishan";
+        personObject.age = 23;
+        personObject.occupation = "Trainee";
+
+        document.writeln(personObject.name);
+        document.writeln(personObject.age);
+        document.writeln(personObject.occupation);
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+<h3> Creating a HTML button that calls a function which increases age of Person object when clicked  </h3>
+
+<p id="demo"></p>
+
+<script>
+    function increaseAge() {
+        var plus1 = personObject.age++
+        document.getElementById("demo").innerText=(plus1);
+    }
+    var personObject = {
+        name: "Awais",
+        age: 24,
+        occupation: "Trainee"
+    }
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+<button onclick="increaseAge()">Increase age</button>
+
+<h3> Creating textboxes and buttons that create Person objects </h3>
+
+<p id="dp"></p>
+
+
+Name:
+<br>
+<input type="text" id="name" placeholder="Enter name"/>
+<br>
+Age:
+<br>
+<input type="number" id="age" placeholder="Enter age"/>
+<br>
+Occupation:
+<br>
+<input type="text" id="occupation" placeholder="Enter occupation"/>
+<br>
+<br>
+<input type="button" onclick="personFunction()" value="Submit"/>
+
+<script>
+   function personFunction(){
+       var createPerson = {
+           name: document.getElementById("name").value,
+           age: document.getElementById("age").value,
+           occupation: document.getElementById("occupation").value,
+       };
+       document.getElementById("dp").innerText=(createPerson.name + " " + createPerson.age + " " + createPerson.occupation);
+   }
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="awais"></p>
+
+<script>
+    function myFunction() {
+        var string = "He said My name is Elliott";
+        var result = string.toUpperCase();
+        document.getElementById("awais").innerHTML = result;
+    }
+
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+    <p id="concat"></p>
+
+<button onclick="toconcat()">Concatinate</button>
+
+<script>
+    function toconcat(){
+    var stringconcat = "Hello";
+    var numberconcat = 402;
+    var concatinate = stringconcat.concat(numberconcat);
+    document.getElementById("concat").innerHTML = concatinate;
+}
+</script>
+
+<p id = "names"></p>
+
+<button onclick="addingNames()">Add</button>
+
+<script>
+    var namelist = [" Awais", " Deepi", " Kishan"];
+    document.getElementById("names").innerHTML = namelist;
+function addingNames(){
+namelist.push(" Suleman");
+    document.getElementById("names").innerHTML = namelist;
+}
+</script>
+
+<p> --------------------------------------------------------------------------------------------</p>
+
+<p id="agerange"></p>
+
+<button onclick="correctAge()">True or False</button>
+
+<script>
+    function correctAge(){
+        var personObject = {
+            name: "Awais",
+            age: 24,
+            occupation: "Trainee"
+        };
+document.getElementById("agerange").innerHTML = Boolean(personObject.age > 20 && personObject.age < 40);
+    }
+</script>
+
+<p id="1to10"></p>
+
+<script>
+var numbers = "";
+var i;
+for (i=0; i<10; i++){
+    numbers +=i + "\n";
+}
+document.getElementById("1to10").innerHTML = numbers;
+</script>
+
+<p id="divideby2"></p>
+
+<script>
+    var numbers = "";
+    var i;
+    for (i=0; i<10; i++){
+        if( i % 2 ==0){
+        numbers +=i + "\n";
+    }}
+    document.getElementById("1to10").innerHTML = numbers;
+
+</script>
+
+</body>
+</html>
+
+
+
+
